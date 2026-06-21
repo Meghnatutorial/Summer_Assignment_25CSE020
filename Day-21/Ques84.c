@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    char str[10];
+    int i = 0;
+    printf("Input a string");
+    fgets(str,sizeof(str),stdin);
+    while(str[i] != '\0')
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i]-32;
+        }
+        i++;
+    }
+    printf("uppercase string:%s",str);
+    return 0;
+}
